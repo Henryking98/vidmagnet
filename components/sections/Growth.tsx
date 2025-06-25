@@ -4,30 +4,59 @@ import Image from 'next/image';
 
 const Growth = () => {
     return (
-        <section className="relative w-full bg-[url(/assets/images/abstract-gradient.png)] bg-cover bg-center py-16 sm:py-24 md:py-36">
-            <div className="container mx-auto px-4">
-                <div className="w-full mx-auto rounded-[30px] sm:rounded-[40px] md:rounded-[50px] bg-[url(/assets/images/bg-gradient2.png)] bg-cover bg-center p-6 sm:p-10 md:p-20">
-                    <div className="flex flex-col items-center text-center">
-                        <div className="relative w-[200px] sm:w-[280px] md:w-[377px] h-[60px] sm:h-[80px] md:h-[100px] mb-6 sm:mb-8 md:mb-10">
+        <section className="relative w-full overflow-hidden py-16 sm:py-24 md:py-32">
+            <div
+                className="absolute inset-0 -z-20"
+                style={{
+                    backgroundImage: `linear-gradient(135deg, #B0099A, #160244), url('/assets/images/abstract-gradient.png')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundBlendMode: 'soft-light',
+                }}
+            />
+
+            <div className="container relative z-10 mx-auto px-4">
+                <div
+                    className="relative w-full rounded-[30px] sm:rounded-[40px] md:rounded-[50px] overflow-hidden px-4 py-10 sm:px-10 sm:py-14 md:px-20 md:py-20"
+                    style={{
+                        backgroundImage: `linear-gradient(135deg, #007FFF, #7332C2), url('/assets/images/bg-gradient2.png')`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundBlendMode: 'multiply',
+                        opacity: 0.95,
+                    }}
+                >
+                    <div className="flex flex-col items-center text-center gap-6 sm:gap-8 md:gap-10 z-10 relative max-w-6xl mx-auto">
+                        <div className="relative w-[180px] sm:w-[240px] md:w-[320px] h-[60px] sm:h-[80px] md:h-[100px]">
                             <Image
-                                src="/assets/logo.svg"
+                                src="/assets/logo-white.svg"
                                 alt="VidMagnet Logo"
                                 fill
                                 className="object-contain"
-                                sizes="(max-width: 768px) 100vw, 377px"
                             />
                         </div>
 
-                        <h2 className="font-outfit font-bold text-white text-[24px] sm:text-[32px] md:text-[40px] leading-snug sm:leading-snug md:leading-snug mb-10 sm:mb-14 md:mb-16 max-w-4xl">
+                        <h2 className="font-outfit font-bold text-white text-[clamp(1.5rem,5vw,2.5rem)] leading-snug">
                             AI-Powered Funnels That Turn Viral Videos Into
                             Leads, List Growth &amp; Commissions — In Just 1
                             Click.
                         </h2>
 
-                        <div className="w-full h-[300px] sm:h-[380px] md:h-[457px] bg-white rounded-[20px] sm:rounded-[24px] md:rounded-[30px] p-4 sm:p-6 md:p-8 mb-10 sm:mb-14 md:mb-16" />
+                        <div className="relative w-full aspect-[16/9] max-w-[1000px]">
+                            <Image
+                                src="/assets/images/img3.png"
+                                alt="VidMagnet Product Mockup"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 1000px"
+                                className="object-contain"
+                                priority
+                            />
+                        </div>
 
-                        <h3 className="font-outfit font-bold text-white text-[22px] sm:text-[28px] md:text-[32px] lg:text-[40px] leading-snug max-w-2xl">
-                            Your Subscribers Need VidMagnet If They WANT to…
+                        <h3 className="font-outfit font-bold text-white text-[clamp(1.25rem,4vw,2.5rem)] leading-snug">
+                            Your Subscribers Need VidMagnet if they WANT to…
                         </h3>
                     </div>
                 </div>

@@ -2,32 +2,46 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
+type FeatureItem = {
+    title: string;
+    description?: string;
+    image?: string;
+    isHighlight?: boolean;
+    link?: string;
+};
 
 const Features = () => {
-    const featuresData = [
+    const featuresData: FeatureItem[] = [
         {
             title: 'Running Paid Ads',
             description: 'High risk. High spend. And no guarantee of ROI.',
+            image: '/assets/images/illustrations/illust10.png',
         },
         {
             title: 'Record Endless Content',
             description:
                 'Burns time, drains energy — and still barely attracts attention.',
+            image: '/assets/images/illustrations/illust11.png',
         },
         {
             title: 'Post Daily on Social Media',
             description:
                 'Feels like a full-time job. And the algorithm never plays fair.',
+            image: '/assets/images/illustrations/illust12.png',
         },
         {
             title: 'Cold Call Prospects',
             description:
                 "Let's face it — nobody wants random sales calls anymore.",
+            image: '/assets/images/illustrations/illust13.png',
         },
         {
             title: 'Do Webinars',
             description:
                 'Some people thrive on camera. Most people just want to hide.',
+            image: '/assets/images/illustrations/illust14.png',
         },
         {
             title: 'And more…',
@@ -76,8 +90,15 @@ const Features = () => {
                                 )}
                             </h3>
 
-                            {!feature.isHighlight && (
-                                <div className="w-full max-w-[340px] h-[180px] sm:h-[200px] md:h-[222px] bg-white border-2 border-[#9e12c0] rounded-[30px] shadow-[0px_20px_50px_#0000001a]" />
+                            {!feature.isHighlight && feature.image && (
+                                <div className="w-full relative max-w-[331px] h-[222px] bg-white border-2 border-[#9e12c0] rounded-[30px] shadow-[0px_20px_50px_#0000001a] flex items-center justify-center overflow-hidden">
+                                    <Image
+                                        src={feature.image}
+                                        alt={feature.title}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
                             )}
 
                             {feature.description && (

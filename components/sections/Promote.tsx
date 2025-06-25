@@ -85,7 +85,7 @@ const Promote = () => {
             <div className="container mx-auto px-4">
                 <Card>
                     <CardContent className="p-0 relative">
-                        <div className="p-6 sm:p-10 md:p-20 pb-0">
+                        <div className="p-6 sm:p-10 md:p-16 pb-0">
                             <h2 className="text-center text-3xl sm:text-5xl md:text-[58px] font-bold bg-[linear-gradient(90deg,rgba(238,76,1,1)_0%,rgba(136,1,136,1)_100%)] bg-clip-text text-transparent mb-4">
                                 FREE Commercial License
                             </h2>
@@ -101,7 +101,15 @@ const Promote = () => {
                                 and run promotions in any niche.
                             </p>
 
-                            <div className="w-full h-[200px] sm:h-[300px] md:h-[389px] mx-auto mb-12 rounded-[30px] shadow-[0px_20px_50px_#0000001a] border-2 border-solid border-[#92087b]"></div>
+                            <div className="w-full relative max-w-[669px] h-[389px] mx-auto mb-12 rounded-[30px] shadow-[0px_20px_50px_#0000001a] overflow-hidden">
+                                <Image
+                                    src="/assets/images/commercial-license.png"
+                                    alt="Free Commercial License"
+                                    fill
+                                    className="object-contain"
+                                    priority
+                                />
+                            </div>
                         </div>
                     </CardContent>
                 </Card>

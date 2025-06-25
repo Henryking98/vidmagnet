@@ -3,6 +3,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { FaCircle } from 'react-icons/fa';
+import Image from 'next/image';
 
 const ReasonQuite = () => {
     const bulletFails = [
@@ -27,7 +28,15 @@ const ReasonQuite = () => {
                 </h2>
 
                 <div className="flex flex-col md:flex-row gap-10 md:gap-12 justify-between mb-16 max-w-[1090px] mx-auto">
-                    <div className="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[588px] bg-white border border-[#ee4c01] rounded-[30px] shadow-[0px_20px_50px_#0000001a]" />
+                    <div className="relative w-full md:w-1/2 h-[588px] bg-white border border-[#ee4c01] rounded-[30px] shadow-[0px_20px_50px_#0000001a]">
+                        <Image
+                            src="/assets/images/img1.png"
+                            alt=""
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
 
                     <div className="w-full md:w-1/2 text-[22px] text-[#110d1a] font-medium space-y-4">
                         <p>
@@ -69,10 +78,18 @@ const ReasonQuite = () => {
                     </h2>
 
                     <div className="flex flex-col md:flex-row-reverse gap-10 md:gap-12 justify-between max-w-[1090px] mx-auto">
-                        <div className="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[680px] bg-white border border-[#ee4c01] rounded-[30px] shadow-[0px_20px_50px_#0000001a]" />
+                        <div className="relative w-full md:w-1/2 h-[588px] bg-white border border-[#ee4c01] rounded-[30px] shadow-[0px_20px_50px_#0000001a]">
+                            <Image
+                                src="/assets/images/img2.png"
+                                alt=""
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
 
                         <div className="w-full md:w-1/2 font-medium text-[#110d1a] text-[22px]">
-                            <div className="space-y-4">
+                            <div className="space-y-6">
                                 <p>
                                     The #2 mistake beginners make is not
                                     following up.

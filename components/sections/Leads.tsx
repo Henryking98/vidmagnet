@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 const Leads = () => {
     const LeadsData = [
@@ -8,16 +9,19 @@ const Leads = () => {
             title: 'Build a List Without Any Work',
             description:
                 "Use other people's content to create opt-in pages that convert like crazy — legally and instantly.",
+            image: '/assets/images/illustrations/illust1.png',
         },
         {
-            title: 'Leverage Other People’s Content',
+            title: 'Build a List Without Any Work',
             description:
-                "Quickly find viral videos with built-in demand and turn them into list-building machines.",
+                "Use other people's content to create opt-in pages that convert like crazy — legally and instantly.",
+            image: '/assets/images/illustrations/illust2.png',
         },
         {
-            title: 'Automate Your Funnel Strategy',
+            title: 'Promote Affiliate Offers Passively',
             description:
-                "No tech, no experience — just AI-driven simplicity that creates stunning funnels in seconds.",
+                'Add your links, CTAs, or freebie offers — and let the traffic & leads roll in.',
+            image: '/assets/images/illustrations/illust3.png',
         },
     ];
 
@@ -40,14 +44,21 @@ const Leads = () => {
                                 } items-center gap-8 md:gap-12`}
                             >
                                 <div className="w-full md:w-1/2 flex justify-center px-4 sm:px-6">
-                                    <div className="w-full max-w-[564px] h-[200px] sm:h-[260px] md:h-[334px] border-2 border-[#0A78F9] bg-white rounded-[20px] sm:rounded-[24px] md:rounded-[30px] shadow-[0px_20px_50px_#0000001a] p-2" />
+                                    <div className="relative w-full max-w-[564px] h-[334px] border-2 border-[#0A78F9] bg-white rounded-[30px] shadow-[0px_20px_50px_#0000001a] p-2 overflow-hidden group">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="w-full md:w-1/2 text-center md:text-left px-2 sm:px-4">
                                     <h3 className="text-[#0548a9] font-bold text-[22px] sm:text-[26px] md:text-[32px] mb-4 leading-snug">
                                         {item.title}
                                     </h3>
-                                    <p className="text-[#110d1a] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed">
+                                    <p className="text-[#110d1a] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed font-[500]">
                                         {item.description}
                                     </p>
                                 </div>
