@@ -82,8 +82,8 @@ function isBulletContent(
 const Promote = () => {
     return (
         <section className="w-full py-16 sm:py-20 md:py-24 bg-[#110d1a] bg-[url(/assets/images/bg-gradient3.png)] bg-center bg-cover">
-            <div className="container mx-auto px-4">
-                <Card>
+            <div className="container mx-auto px-4 relative">
+                <Card className="sm:max-[1000px] m-auto bg-white">
                     <CardContent className="p-0 relative">
                         <div className="p-6 sm:p-10 md:p-16 pb-0">
                             <h2 className="text-center text-3xl sm:text-5xl md:text-[58px] font-bold bg-[linear-gradient(90deg,rgba(238,76,1,1)_0%,rgba(136,1,136,1)_100%)] bg-clip-text text-transparent mb-4">
@@ -113,7 +113,7 @@ const Promote = () => {
                         </div>
                     </CardContent>
                 </Card>
-                <h2 className="text-center text-[32px] sm:text-[42px] md:text-[58px] font-bold bg-gradient-to-r from-[#007FFF] to-[#07ea65] bg-clip-text text-transparent mb-12 sm:mb-16">
+                <h2 className="text-center text-[32px] sm:text-[42px] md:text-[58px] font-bold bg-gradient-to-r from-[#007FFF] to-[#07ea65] bg-clip-text text-transparent mt-4 mb-12 sm:mb-16">
                     TOP 5 Reasons You’ll Love Promoting VidMagnet
                 </h2>
 
@@ -171,6 +171,13 @@ const Promote = () => {
                         </div>
                     ))}
                 </div>
+                <Image
+                    src="/assets/icons/microphone.png"
+                    alt=""
+                    width={95}
+                    height={95}
+                    className="object-contain top-[0] right-0 absolute -z-[1px]"
+                />
             </div>
         </section>
     );
