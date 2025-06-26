@@ -1,5 +1,15 @@
 'use client';
 import Image from 'next/image';
+import { Button } from '../ui/button';
+
+const people = [
+    {
+        profileImage: '/assets/images/rahim.png',
+    },
+    {
+        profileImage: '/assets/images/vivek.png',
+    },
+];
 
 const Welcome = () => {
     return (
@@ -13,21 +23,23 @@ const Welcome = () => {
                     My name is Rahim Farhouni
                 </p>
 
-                <div
-                    className="w-full max-w-[368px] aspect-square mb-[20px] mt-[10px] rounded-full p-[20px] sm:p-[28px] md:p-[34px] shadow-[0px_15.92px_39.81px_0px_rgba(0,0,0,0.2)]"
-                    style={{
-                        background: 'linear-gradient(135deg, #01EEC6, #01A0EE)',
-                    }}
-                >
-                    <div className="w-full h-full relative rounded-full overflow-hidden bg-white">
-                        <Image
-                            src="/assets/images/person.png"
-                            alt="Rahim Farhouni"
-                            fill
-                            className="object-cover rounded-full"
-                            priority
-                        />
-                    </div>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-8 mb-8">
+                    {people.map((person, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center w-full max-w-[305px] px-4 sm:px-0"
+                        >
+                            <div className="relative w-[180px] h-[180px] sm:w-[222px] sm:h-[222px] rounded-full overflow-hidden bg-white mb-4">
+                                <Image
+                                    src={person.profileImage}
+                                    alt="person"
+                                    fill
+                                    className="object-cover rounded-full"
+                                    priority
+                                />
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 <p className="text-[#4550DA] font-semibold text-[20px] sm:text-[24px] md:text-[28px]">

@@ -1,25 +1,30 @@
 'use client';
 
-import React from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
 import { CustomButton } from '../CustomButton';
 import { Input } from '../ui/input';
 import { FaPlay } from 'react-icons/fa';
+import ModalVideo from 'react-modal-video';
+import 'react-modal-video/css/modal-video.css';
 
 const Hero = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <section className="relative w-full py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-10 bg-[url(/assets/images/bg-gradient.jpg)] bg-center bg-cover">
+        <section className="relative z-20 w-full py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-10 bg-[url(/assets/images/bg-gradient.jpg)] bg-center bg-cover">
             <div className="relative container">
                 <div className="max-w-[1000px] mx-auto text-center">
                     <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl mb-2 leading-snug bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(200,222,255,1)_100%)] [-webkit-background-clip:text] bg-clip-text text-transparent">
                         First Ever Viral Video → Lead Funnel Automation Suite
                     </h2>
-                    <h1 className="font-extrabold text-[36px] sm:text-[48px] md:text-[58px] leading-tight bg-[linear-gradient(270deg,rgba(255,0,191,1)_0%,rgba(238,76,1,1)_100%)] [-webkit-background-clip:text] bg-clip-text text-transparent">
+                    <h1 className="font-extrabold text-[36px] sm:text-[48px] md:text-[58px] leading-tight bg-[linear-gradient(270deg,#007FFF_0%,#01EE7B_100%)] [-webkit-background-clip:text] bg-clip-text text-transparent">
                         Turns ANY Viral YouTube Video Into Done-For-You Lead
                         Funnels &amp; Traffic Generators
                     </h1>
+
                     <p className="text-[18px] sm:text-[20px] md:text-[22px] font-normal text-[#c8deff] mb-10 leading-relaxed max-w-[690px] mx-auto">
                         Let AI Find High-Converting Videos, Build Instant Lead
                         Funnels, &amp; Drive Traffic &amp; Opt-ins — All Without
@@ -44,7 +49,7 @@ const Hero = () => {
                                 'shadow-lg hover:bg-blue-700 transition-colors duration-200'
                             )}
                             aria-label="Play Video"
-                            onClick={() => console.log('Play video clicked')}
+                            onClick={() => setIsOpen(true)}
                         >
                             <FaPlay className="text-white w-6 h-6 sm:w-10 sm:h-10" />
                         </div>
@@ -63,7 +68,10 @@ const Hero = () => {
                                     Make Up To $XXX In Funnel Sales
                                 </h3>
 
-                                <CustomButton className="w-full md:w-[238px] h-[54px] rounded-[27px] border border-white bg-gradient-to-r from-[#EE4C01] to-[#F4B005] font-outfit font-bold text-[20px] md:text-[22px]">
+                                <CustomButton
+                                    href="/https://www.jvzoo.com/affiliate/affiliateinfonew/index/420179"
+                                    className="w-full md:w-[238px] h-[54px] rounded-[27px] border border-white bg-gradient-to-r from-[#EE4C01] to-[#F4B005] font-outfit font-bold text-[20px] md:text-[22px]"
+                                >
                                     Get Affiliate Link
                                 </CustomButton>
                             </div>
@@ -132,6 +140,41 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+                <ModalVideo
+                    channel="youtube"
+                    isOpen={isOpen}
+                    videoId="dQw4w9WgXcQ"
+                    onClose={() => setIsOpen(false)}
+                />
+
+                <Image
+                    src="/assets/icons/play.png"
+                    alt="play illustration"
+                    width={95}
+                    height={95}
+                    className="object-contain top-0 right-0 absolute -z-[1px]"
+                />
+                <Image
+                    src="/assets/icons/microphone.png"
+                    alt="micro illustration"
+                    width={95}
+                    height={95}
+                    className="object-contain top-[14rem] left-0 absolute -z-[1px]"
+                />
+                <Image
+                    src="/assets/icons/bubble.png"
+                    alt="bubble illustration"
+                    width={95}
+                    height={95}
+                    className="object-contain top-[68rem] right-0 absolute -z-[1px]"
+                />
+                <Image
+                    src="/assets/icons/envelop.png"
+                    alt="envelop illustration"
+                    width={95}
+                    height={95}
+                    className="object-contain top-[88rem] left-0 absolute -z-[1px]"
+                />
             </div>
         </section>
     );

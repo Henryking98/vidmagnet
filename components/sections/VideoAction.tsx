@@ -1,10 +1,14 @@
 'use client';
-
+import { useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { FaPlay } from 'react-icons/fa';
+import ModalVideo from 'react-modal-video';
+import 'react-modal-video/css/modal-video.css';
 
 const VideoAction = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <section className="w-full py-16 sm:py-20 md:py-24 bg-[#110d1a] relative bg-[url(/assets/images/abstract-purple-blue-wavy.png)] bg-center bg-cover bg-cover bg-center">
             <div className="relative container z-10 px-4 text-center">
@@ -30,12 +34,18 @@ const VideoAction = () => {
                                 'shadow-lg hover:bg-blue-700 transition-colors duration-200'
                             )}
                             aria-label="Play Video"
-                            onClick={() => console.log('Play video clicked')}
+                            onClick={() => setIsOpen(true)}
                         >
                             <FaPlay className="text-white w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10" />
                         </div>
                     </div>
                 </div>
+                <ModalVideo
+                    channel="youtube"
+                    isOpen={isOpen}
+                    videoId="dQw4w9WgXcQ"
+                    onClose={() => setIsOpen(false)}
+                />
             </div>
         </section>
     );

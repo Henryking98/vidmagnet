@@ -13,6 +13,7 @@ import VideoAction from '@/components/sections/VideoAction';
 import Promote from '@/components/sections/Promote';
 import Bonuses from '@/components/sections/Bonuses';
 import Footer from '@/components/sections/Footer';
+import GoToTop from '@/components/GotToTop';
 
 export default function Home() {
     return (
@@ -32,6 +33,8 @@ export default function Home() {
             <Promote />
             <Bonuses />
             <Footer />
+            
+            <GoToTop />
         </div>
     );
 }

@@ -3,6 +3,22 @@ import { Input } from '../ui/input';
 import { Card, CardContent } from '../ui/card';
 import { CustomButton } from '../CustomButton';
 import Image from 'next/image';
+import { Button } from '../ui/button';
+
+const people = [
+    {
+        name: 'Rahim Farhouni',
+        profileImage: '/assets/images/rahim.png',
+        icon: '/assets/icons/skype.svg',
+        bottomText: 'Connect on Skype',
+    },
+    {
+        name: 'Vivek Gour',
+        profileImage: '/assets/images/vivek.png',
+        icon: '/assets/icons/skype.svg',
+        bottomText: 'Connect on Skype',
+    },
+];
 
 const Footer = () => {
     return (
@@ -18,35 +34,43 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col items-center mt-10">
-                    <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] bg-white rounded-full flex justify-center items-center">
-                        <div className="text-4xl font-bold">RF</div>
-                    </div>
-                    <h3 className="mt-2 font-bold text-white text-3xl sm:text-4xl md:text-[58px] text-center">
-                        Rahim Farhouni
-                    </h3>
-                </div>
+                <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 mt-8 mb-8">
+                    {people.map((person, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center w-full max-w-[305px] px-4 sm:px-0"
+                        >
+                            <div className="relative w-[180px] h-[180px] sm:w-[222px] sm:h-[222px] rounded-full overflow-hidden bg-white mb-4">
+                                <Image
+                                    src={person.profileImage}
+                                    alt={person.name}
+                                    fill
+                                    className="object-cover rounded-full"
+                                    priority
+                                />
+                            </div>
 
-                <div className="max-w-[750px] mx-auto mt-6">
-                    <div className="rounded-[69px] bg-gradient-to-r from-[#0548aa] to-[#217bff] px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div className="w-[100px] h-[100px] md:w-[150px] md:h-[150px] flex-shrink-0">
-                            <Image
-                                src="/assets/images/3d-rocket.png"
-                                alt="Rocket"
-                                width={150}
-                                height={150}
-                                className="w-full h-full object-contain"
-                            />
+                            <h3 className="text-[28px] sm:text-[36px] text-white font-bold text-center mb-3">
+                                {person.name}
+                            </h3>
+
+                            <Button
+                                className="w-full py-[9px] min-h-[50px] sm:min-h-[57px] px-6 rounded-full text-white font-medium text-[18px] sm:text-[20px] font-[500] mb-4 inline-flex items-center justify-center gap-2 cursor-pointer"
+                                style={{
+                                    background:
+                                        'linear-gradient(90deg, #007FFF 0%, #23FF99 100%)',
+                                }}
+                            >
+                                <Image
+                                    src={person.icon}
+                                    alt="Skype icon"
+                                    width={24}
+                                    height={24}
+                                />
+                                Connect on Skype
+                            </Button>
                         </div>
-                        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                            <p className="text-white text-xl md:text-3xl font-normal">
-                                Launching On
-                            </p>
-                            <p className="text-white text-xl md:text-3xl font-bold">
-                                4th July 2025 At 11 AM ET/NY
-                            </p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
                 <Card className="max-w-[854px] mx-auto mt-20 bg-[#ffffff33] rounded-[30px] border-2 border-white">
@@ -110,17 +134,44 @@ const Footer = () => {
                 </Card>
 
                 <div className="flex justify-center mt-16 pb-16">
-                    <CustomButton className="w-full sm:w-[400px] md:w-[550px] lg:w-[722px] h-[70px] sm:h-[85px] lg:h-[99px] text-xl sm:text-2xl lg:text-[42px] px-8 rounded-[40px] bg-[linear-gradient(40deg,#ee4c01,#ffa912)] hover:opacity-90 text-white font-bold">
+                    <CustomButton className="w-full sm:w-[400px] md:w-[550px] lg:w-[722px] h-[70px] sm:h-[85px] lg:h-[99px] text-xl sm:text-2xl lg:text-[42px] px-8 rounded-[40px] font-bold">
                         Get Your JVZoo Affiliate Links
                     </CustomButton>
                 </div>
             </div>
 
-            <div className="w-full bg-[#c8deff] py-10 sm:py-[72px] px-4">
-                <div className="max-w-[854px] mx-auto text-center">
+            <div className="w-full bg-[#c8deff] py-10 px-4">
+                <div className="max-w-[854px] mx-auto text-center space-y-4">
                     <h3 className="font-bold text-[#110d1a] text-2xl sm:text-[40px]">
                         Affiliate promotion terms & conditions
                     </h3>
+                    <p className="font-normal text-base sm:text-lg md:text-[18px] lg:text-[20px] text-[#110D1A]">
+                        Disclaimer: Please note that this product does not
+                        provide any guarantee of income or success. The results
+                        achieved by the product owner or any other individuals
+                        mentioned are not indicative of future success or
+                        earnings. This website is not affiliated with FaceBook
+                        or any of its associated entities. Once you navigate
+                        away from FaceBook, the responsibility for the content
+                        and its usage lies solely with the user. All content on
+                        this website, including but not limited to text, images,
+                        and multimedia, is protected by copyright law and the
+                        Digital Millennium Copyright Act. Unauthorized copying,
+                        duplication, modification, or theft, whether intentional
+                        or unintentional, is strictly prohibited. Violators will
+                        be prosecuted to the fullest extent of the law.
+                    </p>
+                    <p className="font-normal text-base sm:text-lg md:text-[18px] lg:text-[20px] text-[#110D1A]">
+                        We want to clarify that JVZoo serves as the retailer for
+                        the products featured on this site. JVZoo®️ is a
+                        registered trademark of BBC Systems Inc., a Florida
+                        corporation located at 1809 E. Broadway Street, Suite
+                        125, Oviedo, FL 32765, USA, and is used with permission.
+                        The role of JVZoo as a retailer does not constitute an
+                        endorsement, approval, or review of these products or
+                        any claims, statements, or opinions used in their
+                        promotion.
+                    </p>
                 </div>
             </div>
         </footer>

@@ -108,7 +108,7 @@ const Bonuses = () => {
                                     funnel, drive traffic
                                 </p>
                                 <p className="text-2xl md:text-4xl font-bold text-[#0548a9] text-center">
-                                    $37 - $47
+                                    $47
                                 </p>
                             </div>
                         </CardContent>
@@ -159,7 +159,7 @@ const Bonuses = () => {
                                 </div>
 
                                 <h4 className="text-4xl font-semibold text-[#0548a9] mb-6">
-                                    VidMagnet Traffic Toolkit
+                                    VidMagnet Traffic Engine
                                 </h4>
 
                                 <div className="text-[22px] mb-8 space-y-4">
@@ -177,7 +177,7 @@ const Bonuses = () => {
                                 </div>
 
                                 <p className="text-[42px] font-bold text-[#0548a9] mt-auto">
-                                    $397
+                                    $67
                                 </p>
                             </CardContent>
                         </Card>
@@ -209,7 +209,7 @@ const Bonuses = () => {
                                 </div>
 
                                 <p className="text-[42px] font-bold text-[#0548a9] mt-auto">
-                                    $47
+                                    $97
                                 </p>
                             </CardContent>
                         </Card>
@@ -221,6 +221,40 @@ const Bonuses = () => {
                                     <div className="bg-[#01eeaa]/30 relative mb-6 w-[156px] h-[51px] flex items-center justify-center">
                                         <h3 className="text-[42px] font-bold text-[#0548a9]">
                                             OTO 4
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <h4 className="text-4xl font-semibold text-[#0548a9] mb-6">
+                                    VidMagnet whitelabel
+                                </h4>
+
+                                <div className="text-[22px] mb-8 space-y-4">
+                                    <p>
+                                        <strong>
+                                            Sell as your own, keep 100%
+                                            commissions —
+                                        </strong>{' '}
+                                        instant software business in a box.
+                                    </p>
+                                    <p>
+                                        Perfect for agencies, coaches, and biz
+                                        opp resellers.
+                                    </p>
+                                </div>
+
+                                <p className="text-[42px] font-bold text-[#0548a9] mt-auto">
+                                    $197
+                                </p>
+                            </CardContent>
+                        </Card>
+                        {/* OTO 5 */}
+                        <Card className="rounded-[30px] border-2 border-[#0548a9] shadow-[0px_20px_50px_#0000001a] bg-white">
+                            <CardContent className="p-8 flex flex-col items-center text-center">
+                                <div className="relative ">
+                                    <div className="bg-[#01eeaa]/30 relative mb-6 w-[156px] h-[51px] flex items-center justify-center">
+                                        <h3 className="text-[42px] font-bold text-[#0548a9]">
+                                            OTO 5
                                         </h3>
                                     </div>
                                 </div>
@@ -244,13 +278,38 @@ const Bonuses = () => {
                                 </div>
 
                                 <p className="text-[42px] font-bold text-[#0548a9] mt-auto">
-                                    $397
+                                    $197
                                 </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card className="rounded-[30px] border-2 border-[#0548a9] shadow-[0px_20px_50px_#0000001a] bg-white">
+                            <CardContent className="p-8 flex flex-col items-center text-center">
+                                <div className="relative ">
+                                    <div className="bg-[#01eeaa]/30 relative mb-6 flex items-center justify-center pr-[10px] pl-[10px]">
+                                        <h3 className="text-[42px] font-bold text-[#0548a9]">
+                                            Instant Bundle Deal
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <div className="text-[22px] mb-8 space-y-4">
+                                    <p className="text-2xl text-center">
+                                        <span className="font-bold text-[#110d1a]">
+                                            All upgrades at 60% off
+                                        </span>
+                                        <span className="text-[#110d1a]">
+                                            {' '}
+                                            — massive value stack that converts
+                                            like crazy
+                                        </span>
+                                    </p>
+                                </div>
                             </CardContent>
                         </Card>
                     </div>
 
-                    <Card className="w-full max-w-[896px] mx-auto rounded-[30px] pb-8 border-2 border-[#0548a9] shadow-[0px_20px_50px_#0000001a] bg-white">
+                    {/* <Card className="w-full max-w-[896px] mx-auto rounded-[30px] pb-8 border-2 border-[#0548a9] shadow-[0px_20px_50px_#0000001a] bg-white">
                         <CardContent className="p-8">
                             <div className="flex flex-col items-center">
                                 <h3 className="text-[42px] font-bold text-[#0548a9] text-center mb-6">
@@ -268,7 +327,7 @@ const Bonuses = () => {
                                 </p>
                             </div>
                         </CardContent>
-                    </Card>
+                    </Card> */}
                 </div>
 
                 <div className="mb-20 mt-8 relative ">
